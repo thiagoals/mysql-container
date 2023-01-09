@@ -1,9 +1,14 @@
 pipeline{
 	agent any
 	stages {
-		stage ('Test'){
+		stage ('Logger'){
 			steps{
-				echo 'Tudo certo'
+				echo '---- MySQL Container ----'
+			}
+		}
+		stage ('Docker compose'){
+			steps{
+				sh 'docker-compose up -d'
 			}
 		}
 	}
