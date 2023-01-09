@@ -8,6 +8,7 @@ pipeline{
 		}
 		stage ('Docker compose'){
 			steps{
+				sh 'cd mysql-container'
 				sh 'docker-compose up -d'
 			}
 		}
