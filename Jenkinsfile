@@ -9,7 +9,7 @@ pipeline{
 		stage ('Docker compose'){
 			steps{
 				sh 'ls -l'
-				sh 'docker-compose up -d'
+				sh 'docker compose up -d'
 			}
 		}
 	}
