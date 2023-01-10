@@ -8,7 +8,7 @@ pipeline{
 		}
 		stage ('Docker compose'){
 			steps{
-				sh 'sudo docker compose up -d'
+				sh 'docker compose up -d'
 			}
 		}
 	}
